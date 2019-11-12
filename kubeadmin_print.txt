@@ -1,0 +1,166 @@
+[root@kubernetes-master2 rook]# tests/scripts/kubeadm.sh up
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.es.its.nyu.edu
+ * extras: mirror.es.its.nyu.edu
+ * updates: mirrors.mit.edu
+Resolving Dependencies
+--> Running transaction check
+---> Package docker-ce.x86_64 0:18.06.2.ce-3.el7 will be updated
+---> Package docker-ce.x86_64 3:19.03.4-3.el7 will be an update
+--> Processing Dependency: containerd.io >= 1.2.2-3 for package: 3:docker-ce-19.03.4-3.el7.x86_64
+--> Processing Dependency: docker-ce-cli for package: 3:docker-ce-19.03.4-3.el7.x86_64
+---> Package sudo.x86_64 0:1.8.23-4.el7 will be updated
+---> Package sudo.x86_64 0:1.8.23-4.el7_7.1 will be an update
+--> Running transaction check
+---> Package containerd.io.x86_64 0:1.2.10-3.2.el7 will be installed
+---> Package docker-ce-cli.x86_64 1:19.03.4-3.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=================================================================================================
+ Package               Arch           Version                     Repository                Size
+=================================================================================================
+Updating:
+ docker-ce             x86_64         3:19.03.4-3.el7             docker-ce-stable          24 M
+ sudo                  x86_64         1.8.23-4.el7_7.1            updates                  841 k
+Installing for dependencies:
+ containerd.io         x86_64         1.2.10-3.2.el7              docker-ce-stable          23 M
+ docker-ce-cli         x86_64         1:19.03.4-3.el7             docker-ce-stable          39 M
+
+Transaction Summary
+=================================================================================================
+Install             ( 2 Dependent packages)
+Upgrade  2 Packages
+
+Total download size: 88 M
+Is this ok [y/d/N]: y
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+(1/4): containerd.io-1.2.10-3.2.el7.x86_64.rpm                            |  23 MB  00:00:00     
+(2/4): docker-ce-19.03.4-3.el7.x86_64.rpm                                 |  24 MB  00:00:00     
+(3/4): sudo-1.8.23-4.el7_7.1.x86_64.rpm                                   | 841 kB  00:00:00     
+(4/4): docker-ce-cli-19.03.4-3.el7.x86_64.rpm                             |  39 MB  00:00:00     
+-------------------------------------------------------------------------------------------------
+Total                                                             58 MB/s |  88 MB  00:00:01     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : containerd.io-1.2.10-3.2.el7.x86_64                                           1/6 
+  Installing : 1:docker-ce-cli-19.03.4-3.el7.x86_64                                          2/6 
+  Updating   : 3:docker-ce-19.03.4-3.el7.x86_64                                              3/6 
+  Updating   : sudo-1.8.23-4.el7_7.1.x86_64                                                  4/6 
+  Cleanup    : sudo-1.8.23-4.el7.x86_64                                                      5/6 
+  Cleanup    : docker-ce-18.06.2.ce-3.el7.x86_64                                             6/6 
+  Verifying  : 1:docker-ce-cli-19.03.4-3.el7.x86_64                                          1/6 
+  Verifying  : 3:docker-ce-19.03.4-3.el7.x86_64                                              2/6 
+  Verifying  : containerd.io-1.2.10-3.2.el7.x86_64                                           3/6 
+  Verifying  : sudo-1.8.23-4.el7_7.1.x86_64                                                  4/6 
+  Verifying  : sudo-1.8.23-4.el7.x86_64                                                      5/6 
+  Verifying  : docker-ce-18.06.2.ce-3.el7.x86_64                                             6/6 
+
+Dependency Installed:
+  containerd.io.x86_64 0:1.2.10-3.2.el7           docker-ce-cli.x86_64 1:19.03.4-3.el7          
+
+Updated:
+  docker-ce.x86_64 3:19.03.4-3.el7                 sudo.x86_64 0:1.8.23-4.el7_7.1                
+
+Complete!
+lsof: status error on /var/lib/dpkg/lock: No such file or directory
+lsof 4.87
+ latest revision: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/
+ latest FAQ: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/FAQ
+ latest man page: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/lsof_man
+ usage: [-?abhKlnNoOPRtUvVX] [+|-c c] [+|-d s] [+D D] [+|-f[gG]] [+|-e s]
+ [-F [f]] [-g [s]] [-i [i]] [+|-L [l]] [+m [m]] [+|-M] [-o [o]] [-p s]
+[+|-r [t]] [-s [p:s]] [-S [t]] [-T [t]] [-u s] [+|-w] [-x [fl]] [-Z [Z]] [--] [names]
+Use the ``-h'' option to get more help information.
+lsof: status error on /var/lib/dpkg/lock: No such file or directory
+lsof 4.87
+ latest revision: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/
+ latest FAQ: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/FAQ
+ latest man page: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/lsof_man
+ usage: [-?abhKlnNoOPRtUvVX] [+|-c c] [+|-d s] [+D D] [+|-f[gG]] [+|-e s]
+ [-F [f]] [-g [s]] [-i [i]] [+|-L [l]] [+m [m]] [+|-M] [-o [o]] [-p s]
+[+|-r [t]] [-s [p:s]] [-S [t]] [-T [t]] [-u s] [+|-w] [-x [fl]] [-Z [Z]] [--] [names]
+Use the ``-h'' option to get more help information.
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.es.its.nyu.edu
+ * extras: mirror.es.its.nyu.edu
+ * updates: mirrors.mit.edu
+No package apt-transport-https available.
+Error: Nothing to do
+/root/go/src/github.com/rook/rook/tests/scripts/kubeadm-install.sh: line 40: apt-key: command not found
+(23) Failed writing body
+/root/go/src/github.com/rook/rook/tests/scripts/kubeadm-install.sh: line 41: /etc/apt/sources.list.d/kubernetes.list: No such file or directory
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.es.its.nyu.edu
+ * extras: mirror.es.its.nyu.edu
+ * updates: mirror.net.cen.ct.gov
+No packages marked for update
+lsof: status error on /var/lib/dpkg/lock: No such file or directory
+lsof 4.87
+ latest revision: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/
+ latest FAQ: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/FAQ
+ latest man page: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/lsof_man
+ usage: [-?abhKlnNoOPRtUvVX] [+|-c c] [+|-d s] [+D D] [+|-f[gG]] [+|-e s]
+ [-F [f]] [-g [s]] [-i [i]] [+|-L [l]] [+m [m]] [+|-M] [-o [o]] [-p s]
+[+|-r [t]] [-s [p:s]] [-S [t]] [-T [t]] [-u s] [+|-w] [-x [fl]] [-Z [Z]] [--] [names]
+Use the ``-h'' option to get more help information.
+lsof: status error on /var/lib/dpkg/lock: No such file or directory
+lsof 4.87
+ latest revision: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/
+ latest FAQ: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/FAQ
+ latest man page: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/lsof_man
+ usage: [-?abhKlnNoOPRtUvVX] [+|-c c] [+|-d s] [+D D] [+|-f[gG]] [+|-e s]
+ [-F [f]] [-g [s]] [-i [i]] [+|-L [l]] [+m [m]] [+|-M] [-o [o]] [-p s]
+[+|-r [t]] [-s [p:s]] [-S [t]] [-T [t]] [-u s] [+|-w] [-x [fl]] [-Z [Z]] [--] [names]
+Use the ``-h'' option to get more help information.
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.es.its.nyu.edu
+ * extras: mirror.es.its.nyu.edu
+ * updates: mirror.net.cen.ct.gov
+No package kubernetes-cni=0.6.0-00 available.
+Error: Nothing to do
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.es.its.nyu.edu
+ * extras: mirror.es.its.nyu.edu
+ * updates: mirror.net.cen.ct.gov
+No package kubelet=1.13.1-00 available.
+Error: Nothing to do
+--2019-11-12 03:53:54--  https://storage.googleapis.com/kubernetes-release/release/v1.13.1/bin/linux/amd64/kubectl
+Resolving storage.googleapis.com (storage.googleapis.com)... 172.217.3.112, 2607:f8b0:4006:818::2010
+Connecting to storage.googleapis.com (storage.googleapis.com)|172.217.3.112|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 39222752 (37M) [application/octet-stream]
+Saving to: ‘kubectl.2’
+
+100%[=======================================================>] 39,222,752   148MB/s   in 0.3s   
+
+2019-11-12 03:53:54 (148 MB/s) - ‘kubectl.2’ saved [39222752/39222752]
+
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.es.its.nyu.edu
+ * extras: mirror.es.its.nyu.edu
+ * updates: mirrors.mit.edu
+No package nfs-common available.
+Error: Nothing to do
+this version of kubeadm only supports deploying clusters with the control plane version >= 1.15.0. Current version: v1.13.1
+To see the stack trace of this error execute with --v=5 or higher
+taint "node-role.kubernetes.io/master" not found
+taint "node-role.kubernetes.io/master" not found
+serviceaccount/weave-net configured
+clusterrole.rbac.authorization.k8s.io/weave-net configured
+clusterrolebinding.rbac.authorization.k8s.io/weave-net configured
+role.rbac.authorization.k8s.io/weave-net configured
+rolebinding.rbac.authorization.k8s.io/weave-net configured
+daemonset.apps/weave-net configured
+wait for K8s master node to be Ready
+k8s master node in Ready status
